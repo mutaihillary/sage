@@ -1,2 +1,1 @@
-# sage
-A tech firm website
+# A tech firm website

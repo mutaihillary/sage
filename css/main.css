@@ -1,0 +1,703 @@
+@import url(https://fonts.googleapis.com/css?family=Play);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body {
+    background: #ecf0f1;
+    height: 100%;
+    width: 100%;
+    margin:0;
+	padding:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2,h5, h6, ul, li, a {
+    padding: 0;
+    margin: 0;
+    color: #ecf0f1;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+/*....................................................................................................................
+
+Responsive Grid Section
+
+....................................................................................................................*/
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    /* Removes padding behaviour on widths */
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+ 
+/* Attribute selector */
+[class*='col-'] {
+    float: left;
+    padding: 10px;
+    border: 0px solid;
+}
+ 
+/* Floats last ".bit-" to the right */
+[class*='col-']:last-of-type {
+    padding-right: 10px;
+    float: right;
+}
+ 
+.row {
+    width: 100%;
+    clear: both;
+}
+
+/* Clearfix */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Main Widths */
+.col-1  {width: 100%;}
+.col-2  {width: 50%;}
+.col-3  {width: 33.33%;}
+.col-4  {width: 25%;}
+.col-5  {width: 20%;}
+.col-6  {width: 16.6666666667%;}
+.col-7  {width: 14.2857142857%;}
+.col-8  {width: 12.5%;}
+.col-9  {width: 11.1111111111%;}
+.col-10 {width: 10%;}
+.col-11 {width: 9.09090909091%;}
+.col-12 {width: 8.33%;}
+
+/*base tablet to small desktop styles*/
+@media (min-width: 800px) and (max-width: 1100px) {
+    .col-2,
+    .col-7 {
+        width: 100%;
+    }
+
+    .col-4,
+    .col-8,
+    .col-10,
+    .col-12 {
+        width: 50%;
+    }
+}
+
+/*base tablet styles*/
+@media (max-width: 800px) {
+    .col-4,
+    .col-6,
+    .col-8,
+    .col-10,
+    .col-12 {
+        width: 50%;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-5,
+    .col-7,
+    .col-9,
+    .col-11 {
+        width: 100%;
+    }
+}
+
+/*base mobile styles - everything 100%*/
+@media (max-width: 480px) {
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        width: 100%;
+    }
+}
+
+.padding {
+    padding: 20px 300px;
+}
+
+/*....................................................................................................................
+
+Header Section
+
+....................................................................................................................*/
+
+#header {
+	width:100%;
+    height: auto;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background: #362D30;
+    
+}
+
+.banner{
+    padding: 20px;
+    border: 1px solid;
+    margin: 10px 0;
+    height: auto;
+    background: #362D30;
+}
+
+.links{
+    position: relative;
+    height: 70px;
+    background: #362D30;
+}
+.logo {
+    background: #F63C3D;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+
+.logo img{
+    height: 100%;
+}
+
+.navigation{
+    position: absolute;
+    top: 0;
+    left: 70px;
+    right: 105px;
+    height: 70px;
+    background: transparent;
+    text-align: center;
+}
+
+.navigation nav {
+    padding-top: 15px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.navigation nav ul{
+    height: 100%;
+    display: inline-block;
+}
+
+.navigation nav ul li{
+    height: 100%;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 13px
+}
+
+
+.navigation nav ul li:hover,
+.navigation nav ul li:active{
+    border-bottom: 4px solid #fff;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 4px solid #fff;
+}
+
+.navigation nav ul li a{
+    text-decoration: none;
+}
+
+.social{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 70px;
+    width: 100px;
+    background: transparent;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.social i{
+    padding: 0 5px;
+    color: #8C8788;
+}
+
+.caption-text{
+    width: 100%;
+    padding: 200px 300px;
+    background: #362D30;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.caption-text p{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+}
+
+.caption-text h5{
+    padding: 18px 150px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px
+}
+
+.caption-text a{
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    margin-left: 42% 
+}
+
+.hrs {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0px;
+    padding-bottom: 25px;
+    display: inline-block;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hr {
+    display: inline-block;
+    width: 35px;
+    border-bottom: 5px solid grey;
+}
+
+.hr:first-child {
+    display: inline-block;
+    width: 35px;
+    border-bottom: 5px solid #fff;
+}
+
+/*....................................................................................................................
+
+Content Section
+
+....................................................................................................................*/
+
+#content {
+    min-height: 100%;
+/*    overflow: auto;*/
+}
+
+.projects{
+    padding: 0 !important;
+}
+
+.highlighted-projects {
+    padding-left: 300px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-top: 80px
+}
+
+.highlighted-projects p{
+    color: #000;
+    line-height: 22px
+}
+
+.highlighted-projects h3{
+    margin-top: 30px;
+    color: #000;
+    font-size: 40px;
+    font-family: 'Play', sans-serif;
+}
+
+.blank {
+    background: #362D30;
+    padding: 0px;
+}
+.journal-blank{
+background-color: red;
+padding: 0px;
+}
+
+/*.row journal padding h4 {
+color: red;
+background-color: yellow;
+}*/
+
+/*.blank2 {
+    width: 100%;
+    height:100%;
+    margin: 10px;
+}*/
+
+.blank .col-3{
+    background: #362D30;
+    height: 200px;
+    border: none;
+}
+
+.blank .col-3{
+    background: #362D30;
+    height: 200px;
+    border: none;
+}
+
+.discover-more {
+    color: #000;
+    padding-top: 40px;
+    background: #FAFAFA;
+    padding-left: 300px;
+}
+
+.discover-more a{
+    text-align: center;
+    color: #fff;
+    background: #F63C3D;
+    padding: 10px 30px;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 5px;
+}
+
+.discover-more p{
+    margin-top: 20px;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.color-bg {
+    background: #F63C3D;
+    padding-top: 400px;
+    padding-left: 100px;
+}
+
+.infinity-spaces {
+    padding-right: 300px;
+}
+
+.infinity-spaces h4{
+    font-family: 'Play', sans-serif;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.infinity-spaces h3{
+    font-family: 'Play', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Play', sans-serif;
+    padding-bottom: 10px;
+}
+
+.infinity-spaces p{
+    color: #fff;
+    font-size: 13px;
+}
+
+.hr-line {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.our-history{
+    padding: 0px;
+    background: #FFFFFF;
+    padding-top: 50px;
+}
+
+.history{
+    padding-left: 300px;
+    padding-right: 30px;
+    padding-bottom: 120px;
+}
+
+.history h3{
+    color: #000;
+    font-size: 40px;
+    font-family: 'Play', sans-serif;
+    padding: 20px 0;
+}
+
+.history p{
+    color: #002;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.history .link{
+    color: #fff;
+    margin: 18px 0;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 5px;
+    height: auto;
+    padding: 10px 0;
+}
+
+.history a{
+    text-align: center;
+    color: #fff;
+    background: #F63C3D;
+    padding: 10px 30px;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 5px;
+}
+
+.sage-logo {
+    text-align: right;
+    padding-right: 300px;
+    float: right;
+    padding-top: 30px;
+}
+
+.sage-logo img{
+    text-align: center;
+    float: right;
+}
+
+.projects-types {
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 30px
+}
+
+.projects-types .col-3 {
+    text-align: center;
+}
+
+.projects-types h4 {
+    color: #F63C3D;
+    font-size: 40px;
+    padding-top: 20px;
+    font-family: 'Play', sans-serif;
+}
+
+.projects-types p {
+    font-size: 14px;
+}
+
+
+/*..................................................................................
+
+Lower Section
+
+..................................................................................*/
+
+.services {
+    text-align: left;
+    font-size: 24px;
+}
+
+.services h3{
+    text-align: left;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Play', sans-serif;
+}
+
+}
+.services .col-3{
+    padding: 150px;
+    max-height: 500px;
+    padding: 0px;
+}
+
+.services .col-3{
+    padding: 150px;
+    max-height: 500px;
+    padding: 0px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+}
+
+.services .col-3 img{
+    padding-bottom: 10px;
+}
+
+.services .col-3 h4 {
+    font-size: 18px;
+}
+.services .col-3 p {
+    padding-top: 20px;
+    font-size: 13px;
+    margin: 15px;
+    margin: 0;
+}
+
+.call-to-action {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+    float: right;
+    padding: 30px 20px !important;
+    text-align: center;
+    background: #362D30;
+}
+
+.call-to-action h4{
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    padding: 10px
+}
+
+.call-to-action p{
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px
+}
+
+.call-to-action a{
+    font-size: 12px;
+    font-family: 'Play', sans-serif;
+    padding-bottom:3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 3px solid;
+}
+
+.very-much-impressed{
+    padding: 20px;
+    border: 1px solid;
+    margin: 10px 0;
+    height: 100px;
+    background: #362D30;
+    height: auto;
+    text-align: center;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.very-much-impressed img{
+    height: 100px;
+}
+
+.stay-connected{
+    padding: 20px;
+    border: 1px solid;
+    margin: 10px 0;
+}
+
+.connected {
+    padding-left: 300px;
+    padding-right: 100px
+}
+
+.connected h4{
+    text-align: left;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Play', sans-serif;
+    padding-right: 50px;
+}
+
+.connected p{
+    text-align: left;
+    font-size: 13px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+}
+
+.connected input{
+    padding: 10px;
+}
+
+.connected a{
+    padding: 12px 20px;
+    background: #F63C3D;
+    font-family: 'Play', sans-serif;
+    font-size: 13px
+}
+
+.email{
+    width: 70%;
+    margin: 0;
+}
+
+.sign-up{
+    margin: 0;
+}
+/*....................................................................................................................
+
+Footer Section
+
+....................................................................................................................*/
+
+#footer {
+    height: auto;
+    width: 100%;
+    color: #fff;
+    background: #fff;
+    border: none;
+}
+
+#footer a {
+    height: auto;
+    color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    padding-right: 0px;
+}
+#footer p {
+    height: auto;
+    color: #000;
+    padding: 10px 20px;
+    padding-left: 0px;
+}
+
+
+.terms-of-use {
+    padding: 10px 300px;
+    border: 1px solid red;
+    margin: 0px 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.copyright {
+    height: 100%;
+    font-size: 12px;
+    color: #000;
+}
+
+.terms {
+    height: 100%;
+    font-size: 12px;
+    text-align: right;
+    display: inline-block;
+    color: #000;
+}
+
+.terms ul{
+    display: inline-block;
+    float: right;
+    width: 100%;
+}
+
+.terms ul li{
+    display: inline-block;
+    color: #000;
+}
